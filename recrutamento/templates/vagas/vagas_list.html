@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Vagas</title>
+</head>
+<body>
+
+    <h1>Vagas Disponíveis</h1>
+
+    {% if vagas %}
+        <ul>
+            {% for vaga in vagas %}
+                <li>
+                    <a href="{% url 'vaga_detalhe' vaga.pk %}">
+                        {{ vaga.titulo }}
+                    </a>
+                    <br>
+                    <small>{{ vaga.descricao|truncatewords:20 }}</small>
+                    <br><br>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Nenhuma vaga cadastrada.</p>
+    {% endif %}
+
+</body>
+</html>

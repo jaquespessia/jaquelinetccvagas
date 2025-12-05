@@ -4,20 +4,20 @@ body {
 }
 
 header, footer {
-    background: #222;
+    background: #f6b5e8;
     color: white;
     padding: 15px;
     text-align: center;
 }
 
 .lista-vagas li {
-    background: #fff;
+    background: #f5abdf;
     padding: 15px;
     margin: 10px 0;
 }
 
 .botao {
-    background: #007bff;
+    background: #f76ee4;
     padding: 8px 12px;
     color: #fff;
     text-decoration: none;

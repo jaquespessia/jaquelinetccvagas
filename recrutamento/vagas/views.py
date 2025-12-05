@@ -27,3 +27,8 @@ def lista_candidatos(request, pk):
     vaga = get_object_or_404(Vaga, pk=pk)
     candidaturas = Candidatura.objects.filter(vaga=vaga)
     return render(request, "vagas/lista_candidatos.html", {"vaga": vaga, "candidaturas": candidaturas})
+
+
+def vagas_list(request):
+    vagas = Vaga.objects.all()
+    return render(request, 'vagas_list.html', {'vagas': vagas})

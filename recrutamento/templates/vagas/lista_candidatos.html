@@ -6,9 +6,9 @@
 <ul>
 {% for c in candidaturas %}
     <li>
-        <strong>{{ c.candidato.nome }}</strong> – {{ c.candidato.email }}
+        <strong>{{ c.candidato.nome }}</strong> — {{ c.candidato.email }}  
         <br>
-        <a href="{{ c.candidato.curriculo.url }}">Download Currículo</a>
+        <a href="{{ c.candidato.curriculo.url }}">Baixar currículo</a>
     </li>
 {% endfor %}
 </ul>
