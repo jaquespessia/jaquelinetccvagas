@@ -1,0 +1,16 @@
+{% extends "vagas/base.html" %}
+
+{% block content %}
+<h2>Candidatos para a vaga: {{ vaga.titulo }}</h2>
+
+<ul>
+{% for c in candidaturas %}
+    <li>
+        <strong>{{ c.candidato.nome }}</strong> – {{ c.candidato.email }}
+        <br>
+        <a href="{{ c.candidato.curriculo.url }}">Download Currículo</a>
+    </li>
+{% endfor %}
+</ul>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "vagas/base.html" %}
+
+{% block content %}
+<h2>Vagas Disponíveis</h2>
+
+<ul class="lista-vagas">
+{% for vaga in vagas %}
+    <li>
+        <h3>{{ vaga.titulo }}</h3>
+        <a class="botao" href="{% url 'vaga_detalhe' vaga.pk %}">Ver detalhes</a>
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "vagas/base.html" %}
+
+{% block content %}
+<h2>{{ vaga.titulo }}</h2>
+<p>{{ vaga.descricao }}</p>
+<p><strong>Requisitos:</strong></p>
+<p>{{ vaga.requisitos }}</p>
+
+<h3>Candidatar-se</h3>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="botao" type="submit">Enviar candidatura</button>
+</form>
+
+{% endblock %}
